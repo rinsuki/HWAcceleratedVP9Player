@@ -18,3 +18,5 @@ Team や
 VP9 のハードウェアデコーダは macOS 11.0 beta 4 から追加された [`VTRegisterSupplementalVideoDecoderIfAvailable(_:)`](https://developer.apple.com/documentation/videotoolbox/3666591-vtregistersupplementalvideodecod?changes=latest_beta) API に 0x7670303 (FourCode で vp09) を渡すと有効化できます。
 
 このAPIを呼んで有効化した後に AVPlayer などに VP9 入り MP4 を読ませると普通に再生してくれます (ただし HW 支援がないと失敗するかも)。
+
+詳しい呼び方は WebKit のこのへん https://trac.webkit.org/log/webkit/trunk/Source/WebCore/platform/graphics/cocoa/VP9UtilitiesCocoa.mm を見るとよいでしょう。
