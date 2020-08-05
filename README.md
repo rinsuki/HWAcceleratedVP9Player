@@ -5,7 +5,7 @@ macOS 11.0 Big Sur beta 4 から VP9 のHW支援でのデコードに対応し�
 ## How to build
 
 git clone して HWAcceleratedVP9Player.xcodeproj を開きビルドしてください。
-Team や 
+Team や Signing Certificate を変更する必要があるかもしれません。
 
 ## VP9 入り MP4 の作り方
 
@@ -20,3 +20,5 @@ VP9 のハードウェアデコーダは macOS 11.0 beta 4 から追加された
 このAPIを呼んで有効化した後に AVPlayer などに VP9 入り MP4 を読ませると普通に再生してくれます (ただし HW 支援がないと失敗するかも)。
 
 詳しい呼び方は WebKit のこのへん https://trac.webkit.org/log/webkit/trunk/Source/WebCore/platform/graphics/cocoa/VP9UtilitiesCocoa.mm を見るとよいでしょう。
+
+(GitHub の webkit/webkit にはまだ同期されてないようなので注意。 qtwebkit/webkit-mirror とか見るといいかも)
